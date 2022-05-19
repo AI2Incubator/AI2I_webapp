@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./api:/usr/src/api
+    ports:
+      - 5001:5000
+    environment:
+      # This ensures that errors are printed as they occur, which
+      # makes debugging easier.
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=DEBUG

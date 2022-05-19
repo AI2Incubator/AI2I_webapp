@@ -1,0 +1,17 @@
+FROM python:3.8.13-alpine
+
+# Setup a spot for the api code
+WORKDIR /usr/src/api
+COPY requirements.txt ./
+
+# Install Python dependencies
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+COPY *.py ./
+# This enables the Flask debugger and activates code that restarts the
+# API as you make changes
+ARG FLASK_ENV=development
+ENV FLASK_ENV $FLASK_ENV
+
+CMD python manage.py run -h 0.0.0.0

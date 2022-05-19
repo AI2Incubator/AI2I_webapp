@@ -1,0 +1,6 @@
+config:
+  aws:region: us-west-2
+  starter-app:name: isapp
+  starter-app:apiPort: 5000
+  starter-app:domain: ai2incubator.com
+  starter-app:subDomain: isapp
