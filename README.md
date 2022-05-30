@@ -1,17 +1,20 @@
 ## Starter webapp with easy deployment to AWS ECS
 
+This repo contains the scaffold/template for a full-stack web application with the following requirements: 
+
 - A Python/Flask HTTP backend service. It contains a simple `GET` API that returns
   a random number between 0 and 100.
 - A TypeScript/ReactJS web frontend. It's created with
   `npx create-react-app web --template typescript` command.
 - Easy deployment to AWS ECS using Pulumi.
-  Automatically set up Route53 and certificates needed to use a custom domain/subdomain.
+- Automatically set up Route53 and certificates needed to use a custom domain/subdomain.
 - Continuous deployment via GitHub Actions.
 
 ### Prerequisites
 
-- Docker and Docker Compose
+- Docker and Docker Compose.
 - NodeJS. We recommend using `nvm`.
+- A domain name already set up via AWS Route53's Hosted zones.
 
 ### Getting Started
 
